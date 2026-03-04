@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  width: 100%;
+  overflow-x: hidden;
+  /* Evita scrolls horizontales raros */
+}
+
+:root {
+  /* Variables de color para Dark Mode */
+  --bg-color: #0a0b10;
+  --text-main: #e0e6ed;
+  --text-secondary: #8892b0;
+  --accent-blue: #2563eb;
+  --accent-green: #84cc16;
+  /* Un color lima de tu logo para contraste */
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Estilos de botones que usaremos en múltiples secciones */
+.btn-primary {
+  background-color: var(--accent-blue);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  font-size: 1rem;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-main);
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: 2px solid var(--text-secondary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.3s, color 0.3s;
+  font-size: 1rem;
+}
+
+.btn-secondary:hover {
+  border-color: var(--text-main);
+  color: white;
+}

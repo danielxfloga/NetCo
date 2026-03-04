@@ -1,0 +1,106 @@
+/* src/components/Hero.css */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 140px 10% 80px;
+    /* Más padding top para el navbar fijo */
+    min-height: 90vh;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-title {
+    font-size: 3.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: white;
+    margin-bottom: 25px;
+    letter-spacing: -2px;
+}
+
+.highlight {
+    background: linear-gradient(90deg, #2563eb, #84cc16);
+    /* Degradado del logo en el texto */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    margin-bottom: 45px;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Sección Visual con efecto de brillo */
+.hero-visual {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.symbol-glow-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-symbol-large {
+    height: 350px;
+    /* Símbolo grande */
+    width: auto;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 0 20px rgba(37, 99, 235, 0.3));
+    /* Brillo sutil inicial */
+}
+
+.glow-effect {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.2) 0%, rgba(10, 11, 16, 0) 70%);
+    border-radius: 50%;
+    z-index: 1;
+    filter: blur(20px);
+}
+
+/* Responsivo para móviles */
+@media (max-width: 1024px) {
+    .hero-container {
+        flex-direction: column-reverse;
+        /* Imagen arriba en móvil */
+        text-align: center;
+        padding: 120px 5% 60px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-top: 50px;
+    }
+
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-symbol-large {
+        height: 250px;
+    }
+}
